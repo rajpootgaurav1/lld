@@ -7,7 +7,6 @@ import project.ticTacToe.entity.Player;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Scanner;
 
 import static project.ticTacToe.entity.Piece.O;
 import static project.ticTacToe.entity.Piece.X;
