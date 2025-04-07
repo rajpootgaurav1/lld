@@ -1,4 +1,4 @@
-package com.lld.project.decoratorpattern.coffee;
+package project.ticTacToe.decoratorpattern.coffee;
 
 public class RegularCoffee implements Coffee{
     @Override

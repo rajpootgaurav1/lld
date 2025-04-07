@@ -1,6 +1,7 @@
-package com.lld.project.decoratorpattern.decorator;
+package project.ticTacToe.decoratorpattern.decorator;
 
-import com.lld.project.decoratorpattern.coffee.Coffee;
+
+import project.ticTacToe.decoratorpattern.coffee.Coffee;
 
 public class CreamDecorator extends CoffeeDecorator {
     private final Coffee coffee;
