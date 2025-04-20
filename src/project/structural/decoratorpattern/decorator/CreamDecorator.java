@@ -1,9 +1,10 @@
-package project.decoratorpattern.decorator;
+package project.structural.decoratorpattern.decorator;
 
 
-import project.decoratorpattern.coffee.Coffee;
+import project.structural.decoratorpattern.coffee.Coffee;
 
 public class CreamDecorator extends CoffeeDecorator {
+
     private final Coffee coffee;
     public CreamDecorator(Coffee coffee){
         this.coffee = coffee;

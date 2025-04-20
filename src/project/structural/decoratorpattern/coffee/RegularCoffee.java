@@ -1,4 +1,4 @@
-package project.decoratorpattern.coffee;
+package project.structural.decoratorpattern.coffee;
 
 public class RegularCoffee implements Coffee {
     @Override

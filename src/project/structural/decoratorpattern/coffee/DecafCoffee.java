@@ -1,4 +1,4 @@
-package project.decoratorpattern.coffee;
+package project.structural.decoratorpattern.coffee;
 
 public class DecafCoffee implements Coffee {
 
@@ -9,6 +9,6 @@ public class DecafCoffee implements Coffee {
 
     @Override
     public double getCost() {
-        return 0;
+        return 50;
     }
 }

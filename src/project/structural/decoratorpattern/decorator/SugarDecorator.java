@@ -1,7 +1,7 @@
-package project.decoratorpattern.decorator;
+package project.structural.decoratorpattern.decorator;
 
 
-import project.decoratorpattern.coffee.Coffee;
+import project.structural.decoratorpattern.coffee.Coffee;
 
 public class SugarDecorator extends CoffeeDecorator {
     private final Coffee coffee;
