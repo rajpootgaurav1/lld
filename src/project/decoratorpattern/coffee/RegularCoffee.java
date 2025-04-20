@@ -1,6 +1,6 @@
-package project.ticTacToe.decoratorpattern.coffee;
+package project.decoratorpattern.coffee;
 
-public class RegularCoffee implements Coffee{
+public class RegularCoffee implements Coffee {
     @Override
     public String getDescription() {
         return "Regular coffee";
