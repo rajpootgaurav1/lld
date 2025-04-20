@@ -1,4 +1,4 @@
-package project.ticTacToe.decoratorpattern.coffee;
+package project.decoratorpattern.coffee;
 
 public interface Coffee {
 
