@@ -1,7 +1,5 @@
 package project.ticTacToe.service;
 
-
-
 import project.ticTacToe.entity.Board;
 import project.ticTacToe.entity.Player;
 
@@ -16,11 +14,9 @@ public class TicTacToeGame {
     private Deque<Player> chanceToMove;
     private Board board;
     private int totalMoveLeft;
-    private final BoardService boardService;
 
     public TicTacToeGame() {
         initializeGame();
-        boardService = new BoardService();
     }
 
     private void initializeGame() {
@@ -38,18 +34,17 @@ public class TicTacToeGame {
     }
 
     public String startGame() {
-        boolean hasNoWinner = false;
-        while (!hasNoWinner) {
+        while (true) {
 
             final Player currentPlayer = chanceToMove.pollFirst();
 
-            boardService.printBoard(board);
+            board.printBoard();
             //take user input for moving the piece dynamically no hardcoding using actual user input
             System.out.println("Enter the row and column to place your piece");
             int row =(int)(Math.random() * 3);
             int column = (int)(Math.random() * 3);
             assert currentPlayer != null;
-            boolean isValidMove = boardService.addPiece(row, column, currentPlayer.getPiece(), board);
+            boolean isValidMove = board.addPiece(row, column, currentPlayer.getPiece());
             if (!isValidMove) {
                 System.out.println("Invalid move, try again");
                 chanceToMove.addFirst(currentPlayer);
@@ -64,13 +59,12 @@ public class TicTacToeGame {
                 }
             }
             //check if current player has won
-            boolean winner = boardService.checkWinner(board, currentPlayer.getPiece(), row, column);
+            boolean winner = board.checkWinner(currentPlayer.getPiece(), row, column);
             if (winner) {
                 return currentPlayer.getName();
             }
 
         }
-        return "tie";
     }
 
 }
